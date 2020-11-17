@@ -1,5 +1,5 @@
 configure :production, :development do
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/dev')
+  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/user')
 
   ActiveRecord::Base.establish_connection(
     adapter:  db.scheme == 'postgres' ? 'postgresql' : db.scheme,
